@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-4">Generate Certificates</h5>
+                
+                <!-- Template Upload -->
+                <div class="mb-4">
+                    <label class="form-label">1. Upload Certificate Template (.docx, .ppt, .pptx)</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="templateFile" accept=".docx,.ppt,.pptx">
+                        <button class="btn btn-secondary" type="button" id="uploadTemplate">Upload</button>
+                    </div>
+                    <div id="templateVariables" class="mt-2"></div>
+                </div>
+
+                <!-- Data File Upload -->
+                <div class="mb-4">
+                    <label class="form-label">2. Upload Data File (.csv, .xlsx)</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="dataFile" accept=".csv,.xlsx">
+                        <button class="btn btn-secondary" type="button" id="uploadData">Upload</button>
+                    </div>
+                    <div id="dataColumns" class="mt-2"></div>
+                </div>
+
+                <!-- Variable Mapping -->
+                <div class="mb-4" id="mappingSection" style="display: none;">
+                    <label class="form-label">3. Map Variables</label>
+                    <div id="mappingFields"></div>
+                </div>
+
+                <!-- Generate Button -->
+                <div class="text-center">
+                    <button class="btn btn-primary" id="generateBtn" disabled>
+                        <i class="bi bi-file-earmark-pdf me-2"></i>
+                        Generate Certificates
+                    </button>
+                </div>
+
+                <!-- Progress -->
+                <div class="progress mt-3" style="display: none;" id="progressBar">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

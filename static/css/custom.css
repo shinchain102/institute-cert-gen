@@ -1,0 +1,94 @@
+:root {
+    --brand-primary: #00652D;
+    --brand-accent: #F0B436;
+}
+
+body {
+    background-color: #fff;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.alert {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 0.25rem rgba(0, 101, 45, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #005024;
+    border-color: #005024;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: var(--brand-accent);
+    border-color: var(--brand-accent);
+    color: #000;
+}
+
+.btn-secondary:hover {
+    background-color: #e5a82f;
+    border-color: #e5a82f;
+    color: #000;
+}
+
+.mapping-select {
+    max-width: 300px;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+}
+
+.footer p {
+    margin-bottom: 0;
+    color: var(--brand-primary);
+}
+
+.header-title {
+    color: var(--brand-primary);
+    font-size: 1.8rem;
+    margin: 2rem 0 3rem;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid var(--brand-accent);
+}
+
+.header-title img {
+    display: block;
+    margin: 1rem auto;
+    height: 50px;
+}
